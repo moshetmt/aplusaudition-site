@@ -35,6 +35,12 @@ def captures():
             pg = b.new_page(viewport={"width": w, "height": 900}, device_scale_factor=1)
             pg.goto(url, wait_until="networkidle", timeout=60000)
             pg.wait_for_timeout(800)
+            # faire defiler pour charger les images differees avant la capture
+            h, y = pg.evaluate("document.body.scrollHeight"), 0
+            while y < h:
+                pg.evaluate(f"window.scrollTo(0,{y})"); pg.wait_for_timeout(120); y += 600
+                h = pg.evaluate("document.body.scrollHeight")
+            pg.evaluate("window.scrollTo(0,0)"); pg.wait_for_timeout(500)
             pg.screenshot(path=os.path.join(CAPT, f"capture-{w}.png"), full_page=True)
             if w == 390:
                 pg.click("button[aria-label='Ouvrir le menu']")

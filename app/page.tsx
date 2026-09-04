@@ -7,6 +7,7 @@ import { Sante } from "@/components/site/sante";
 import { Gabriel } from "@/components/site/gabriel";
 import { Avis } from "@/components/site/avis";
 import { Acces } from "@/components/site/acces";
+import { Footer } from "@/components/site/footer";
 
 export default function Home() {
   return (
@@ -21,10 +22,8 @@ export default function Home() {
         <Gabriel />
         <Avis />
         <Acces />
-        <p className="px-6 py-14 text-center text-base text-muted-foreground">
-          Pied de page après validation de la section 5.
-        </p>
       </main>
+      <Footer />
     </>
   );
 }

@@ -13,14 +13,14 @@ export const site = {
   ],
   itineraire:
     "https://www.google.com/maps/dir/?api=1&destination=24+boulevard+Alexandre+III+06400+Cannes",
-  avisGoogle:
-    "https://www.google.com/maps/search/?api=1&query=A%2B+Audition+24+boulevard+Alexandre+III+06400+Cannes",
+  avisGoogle: "https://www.google.com/search?kgmid=/g/11m5y4wbnm&q=A%2B+Audition+Cannes",
+  laisserAvis: "https://share.google/zpP9lgq8xUxrHlcM7",
   noteGoogle: "5,0",
   nbAvis: 18,
   nav: [
-    { href: "#haut", label: "Accueil" },
-    { href: "#offres", label: "Nos offres" },
-    { href: "#centre", label: "Le centre" },
-    { href: "#contact", label: "Contact" },
+    { href: "/#haut", label: "Accueil" },
+    { href: "/#offres", label: "Nos offres" },
+    { href: "/#centre", label: "Le centre" },
+    { href: "/#contact", label: "Contact" },
   ],
 };

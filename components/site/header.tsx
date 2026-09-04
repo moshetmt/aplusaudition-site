@@ -28,7 +28,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-sable-200 bg-white">
       <div className="mx-auto flex h-[68px] w-[min(1200px,100%-48px)] items-center gap-3 md:h-[84px] md:gap-8">
-        <Link href="#haut" aria-label="A+ Audition, retour à l'accueil" className="flex shrink-0 items-center gap-3.5">
+        <Link href="/#haut" aria-label="A+ Audition, retour à l'accueil" className="flex shrink-0 items-center gap-3.5">
           <Image src="/images/logo.png" alt="" width={58} height={58} className="size-[46px] md:size-[58px]" priority />
           <span className="flex flex-col">
             <span className="text-[21px] font-bold leading-none md:text-2xl">{site.nom}</span>

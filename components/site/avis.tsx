@@ -34,7 +34,7 @@ export function Avis() {
             <ExternalLink className="size-5" aria-hidden="true" />
           </a>
           <a
-            href={site.avisGoogle}
+            href={site.laisserAvis}
             target="_blank"
             rel="noopener"
             className={cn(

@@ -65,7 +65,7 @@
   --border: #e8d9b6;
   --input: #e8d9b6;
   --ring: #8a6a2e;
-  --radius: 0.25rem;
+  --radius: 0.625rem;
 }
 
 @layer base {

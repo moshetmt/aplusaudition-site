@@ -9,7 +9,7 @@ const reperes = [
 
 export function Bande() {
   return (
-    <section aria-label="En bref" className="border-b border-sable-200 bg-sable-100">
+    <section aria-label="En bref" className="hidden border-b border-sable-200 bg-sable-100 md:block">
       <ul className="mx-auto flex w-[min(1200px,100%-48px)] flex-col divide-y divide-sable-200 md:grid md:grid-cols-4 md:divide-x md:divide-y-0">
         {reperes.map(({ Icon, titre, sous, plein }) => (
           <li

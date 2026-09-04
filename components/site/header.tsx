@@ -17,11 +17,11 @@ import { site } from "@/lib/site";
 
 const btnOr = cn(
   buttonVariants({ variant: "default" }),
-  "h-12 px-5 text-[17px] font-bold rounded-sm hover:bg-sable-500"
+  "h-12 px-5 text-[17px] font-bold rounded-full hover:bg-sable-500"
 );
 const btnContour = cn(
   buttonVariants({ variant: "outline" }),
-  "h-12 px-5 text-[17px] font-bold rounded-sm border-2 border-sable-900 bg-white hover:bg-sable-50"
+  "h-12 px-5 text-[17px] font-bold rounded-full border-2 border-sable-900 bg-white hover:bg-sable-50"
 );
 
 export function Header() {
@@ -64,7 +64,7 @@ export function Header() {
           <a
             href={site.telephoneHref}
             aria-label={`Appeler le ${site.telephone}`}
-            className="grid size-12 place-items-center rounded-sm bg-sable-400 text-sable-900 md:hidden"
+            className="grid size-12 place-items-center rounded-full bg-sable-400 text-sable-900 md:hidden"
           >
             <Phone className="size-[22px]" aria-hidden="true" />
           </a>
@@ -72,7 +72,7 @@ export function Header() {
           <Sheet>
             <SheetTrigger
               aria-label="Ouvrir le menu"
-              className="grid size-12 place-items-center rounded-sm border-2 border-sable-900 bg-white text-sable-900 md:hidden"
+              className="grid size-12 place-items-center rounded-full border-2 border-sable-900 bg-white text-sable-900 md:hidden"
             >
               <Menu className="size-6" aria-hidden="true" />
             </SheetTrigger>

@@ -29,7 +29,7 @@ export function Centre() {
             href="#contact"
             className={cn(
               buttonVariants({ variant: "outline" }),
-              "h-12 rounded-sm border-2 border-sable-900 bg-white px-5 text-[17px] font-bold hover:bg-sable-50"
+              "h-12 rounded-full border-2 border-sable-900 bg-white px-5 text-[17px] font-bold hover:bg-sable-50"
             )}
           >
             Comment venir
@@ -47,9 +47,8 @@ export function Centre() {
                   width={765}
                   height={1020}
                   sizes="(min-width: 960px) 350px, 45vw"
-                  className="aspect-[4/5] w-full rounded-sm object-cover"
+                  className="aspect-[4/5] w-full rounded-lg object-cover"
                 />
-                <figcaption className="mt-2 text-[15px] font-semibold text-sable-900 md:text-base">{p.legende}</figcaption>
               </figure>
             </li>
           ))}

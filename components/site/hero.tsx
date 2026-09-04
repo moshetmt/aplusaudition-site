@@ -34,7 +34,7 @@ export function Hero() {
               href={site.doctolib}
               className={cn(
                 buttonVariants({ variant: "default" }),
-                "h-[58px] w-full rounded-sm px-6 text-[19px] font-bold hover:bg-sable-500 md:w-auto"
+                "h-[58px] w-full rounded-full px-6 text-[19px] font-bold hover:bg-sable-500 md:w-auto"
               )}
             >
               <CalendarDays className="size-5" aria-hidden="true" />
@@ -44,7 +44,7 @@ export function Hero() {
               href={site.telephoneHref}
               className={cn(
                 buttonVariants({ variant: "outline" }),
-                "h-[58px] w-full rounded-sm border-2 border-white bg-transparent px-6 text-[19px] font-bold text-white hover:bg-white/10 hover:text-white md:w-auto"
+                "h-[58px] w-full rounded-full border-2 border-white bg-transparent px-6 text-[19px] font-bold text-white hover:bg-white/10 hover:text-white md:w-auto"
               )}
             >
               <Phone className="size-5" aria-hidden="true" />

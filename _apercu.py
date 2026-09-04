@@ -71,6 +71,8 @@ def autonome(dest_dir):
         # l'artefact refuse les echappements \u de demi-surrogates non appaires
         code = re.sub(r'\\u[dD][89abAB][0-9a-fA-F]{2}(?!\\u[dD][c-fC-F][0-9a-fA-F]{2})', r'\\u0020', code)
         code = re.sub(r'(?<!\\u[dD][89abAB][0-9a-fA-F]{2})\\u[dD][c-fC-F][0-9a-fA-F]{2}', r'\\u0020', code)
+        # un "</script" ou "<!--" dans une chaine JS fermerait la balise inline
+        code = code.replace("</script", "<\\/script").replace("<!--", "<\\!--")
         return "<script>" + code + "</script>"
     html = re.sub(r'<script[^>]+src="([^"]+)"[^>]*></script>', js, html)
     # images et polices locales -> data URI

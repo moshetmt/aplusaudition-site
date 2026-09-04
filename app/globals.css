@@ -1,0 +1,103 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/* Palette : uniquement des variantes de sable derivees de l'enseigne (#D8B676),
+   de l'ecru au brun-sable fonce. Police unique : Source Sans 3 (next/font). */
+
+@theme {
+  --color-sable-50: #fbf8f1;
+  --color-sable-100: #f4ecd9;
+  --color-sable-200: #e8d9b6;
+  --color-sable-400: #d8b676;
+  --color-sable-500: #c49e58;
+  --color-sable-700: #8a6a2e;
+  --color-sable-900: #3b2f1c;
+  --color-sable-950: #241c10;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-heading: var(--font-sans);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #3b2f1c;
+  --card: #ffffff;
+  --card-foreground: #3b2f1c;
+  --popover: #ffffff;
+  --popover-foreground: #3b2f1c;
+  --primary: #d8b676;
+  --primary-foreground: #3b2f1c;
+  --secondary: #f4ecd9;
+  --secondary-foreground: #3b2f1c;
+  --muted: #f4ecd9;
+  --muted-foreground: #6b5f4c;
+  --accent: #fbf8f1;
+  --accent-foreground: #3b2f1c;
+  --destructive: #b3261e;
+  --border: #e8d9b6;
+  --input: #e8d9b6;
+  --ring: #8a6a2e;
+  --radius: 0.25rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans scroll-smooth;
+  }
+  body {
+    @apply bg-background text-foreground text-lg leading-normal;
+  }
+}
+
+/* Voile sur la photo de la banniere : lateral sur desktop, vertical sur mobile */
+.hero-voile {
+  background: linear-gradient(
+    180deg,
+    rgba(36, 28, 16, 0.66) 0%,
+    rgba(36, 28, 16, 0.84) 45%,
+    rgba(36, 28, 16, 0.9) 100%
+  );
+}
+@media (min-width: 960px) {
+  .hero-voile {
+    background: linear-gradient(
+      90deg,
+      rgba(36, 28, 16, 0.95) 0%,
+      rgba(36, 28, 16, 0.88) 34%,
+      rgba(36, 28, 16, 0.52) 52%,
+      rgba(36, 28, 16, 0.06) 72%,
+      rgba(36, 28, 16, 0) 100%
+    );
+  }
+}

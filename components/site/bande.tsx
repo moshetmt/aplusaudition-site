@@ -10,24 +10,19 @@ const reperes = [
 export function Bande() {
   return (
     <section aria-label="En bref" className="border-b border-sable-200 bg-sable-100">
-      <ul className="mx-auto grid w-[min(1200px,100%-48px)] grid-cols-2 md:grid-cols-4">
-        {reperes.map(({ Icon, titre, sous, plein }, i) => (
+      <ul className="mx-auto flex w-[min(1200px,100%-48px)] flex-col divide-y divide-sable-200 md:grid md:grid-cols-4 md:divide-x md:divide-y-0">
+        {reperes.map(({ Icon, titre, sous, plein }) => (
           <li
             key={titre}
-            className={[
-              "flex items-center gap-3.5 py-4 text-base font-semibold leading-tight md:py-[22px] md:text-[17px]",
-              i % 2 === 1 ? "border-l border-sable-200 pl-4 md:pl-6" : "pr-4 md:pr-6",
-              i < 2 ? "border-b border-sable-200 md:border-b-0" : "",
-              i > 0 ? "md:border-l md:border-sable-200 md:pl-6" : "",
-            ].join(" ")}
+            className="flex items-center gap-3.5 py-3.5 text-[17px] font-semibold leading-tight md:px-6 md:py-[22px] md:first:pl-0 md:last:pr-0"
           >
             <Icon
               className={`size-6 shrink-0 text-sable-700 md:size-7 ${plein ? "fill-sable-400" : ""}`}
               aria-hidden="true"
             />
-            <span>
+            <span className="flex flex-wrap items-baseline gap-x-2 md:flex-col md:gap-0">
               {titre}
-              <small className="block text-[15px] font-normal text-muted-foreground">{sous}</small>
+              <small className="text-[15px] font-normal text-muted-foreground">{sous}</small>
             </span>
           </li>
         ))}

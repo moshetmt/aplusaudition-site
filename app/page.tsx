@@ -4,6 +4,7 @@ import { Bande } from "@/components/site/bande";
 import { Centre } from "@/components/site/centre";
 import { Parcours } from "@/components/site/parcours";
 import { Sante } from "@/components/site/sante";
+import { Gabriel } from "@/components/site/gabriel";
 
 export default function Home() {
   return (
@@ -15,8 +16,9 @@ export default function Home() {
         <Centre />
         <Parcours />
         <Sante />
+        <Gabriel />
         <p className="px-6 py-14 text-center text-base text-muted-foreground">
-          Suite de la page après validation de la section 3.
+          Suite de la page après validation de la section 4.
         </p>
       </main>
     </>

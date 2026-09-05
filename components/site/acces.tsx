@@ -40,14 +40,14 @@ export function Acces() {
               <dt className="sr-only">Téléphone</dt>
               <Phone className="mt-1 size-6 shrink-0 text-sable-700" aria-hidden="true" />
               <dd className="m-0 font-semibold md:text-xl">
-                <a href={site.telephoneHref} className="underline-offset-4 hover:underline">{site.telephone}</a>
+                <a href={site.telephoneHref} className="inline-flex min-h-11 items-center underline-offset-4 hover:underline">{site.telephone}</a>
               </dd>
             </div>
             <div className="flex items-start gap-3.5">
               <dt className="sr-only">E-mail</dt>
               <Mail className="mt-1 size-6 shrink-0 text-sable-700" aria-hidden="true" />
               <dd className="m-0 md:text-xl">
-                <a href={`mailto:${site.email}`} className="underline-offset-4 hover:underline">{site.email}</a>
+                <a href={`mailto:${site.email}`} className="inline-flex min-h-11 items-center underline-offset-4 hover:underline">{site.email}</a>
               </dd>
             </div>
           </dl>

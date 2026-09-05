@@ -15,28 +15,28 @@ export function Footer() {
 
         <div>
           <p className="mb-3 text-[15px] font-bold uppercase tracking-[0.08em] text-sable-400">Le site</p>
-          <ul className="flex flex-col gap-2">
+          <ul className="flex flex-col gap-0.5">
             {site.nav.map((n) => (
               <li key={n.href}>
-                <Link href={n.href} className="underline-offset-4 hover:underline">{n.label}</Link>
+                <Link href={n.href} className="inline-flex min-h-11 items-center underline-offset-4 hover:underline">{n.label}</Link>
               </li>
             ))}
-            <li><Link href="/mentions-legales/" className="underline-offset-4 hover:underline">Mentions légales</Link></li>
-            <li><Link href="/confidentialite/" className="underline-offset-4 hover:underline">Politique de confidentialité</Link></li>
+            <li><Link href="/mentions-legales/" className="inline-flex min-h-11 items-center underline-offset-4 hover:underline">Mentions légales</Link></li>
+            <li><Link href="/confidentialite/" className="inline-flex min-h-11 items-center underline-offset-4 hover:underline">Politique de confidentialité</Link></li>
           </ul>
         </div>
 
         <div>
           <p className="mb-3 text-[15px] font-bold uppercase tracking-[0.08em] text-sable-400">Contact</p>
-          <ul className="flex flex-col gap-2">
-            <li><a href={site.telephoneHref} className="text-xl font-bold text-white underline-offset-4 hover:underline">{site.telephone}</a></li>
-            <li><a href={`mailto:${site.email}`} className="underline-offset-4 hover:underline">{site.email}</a></li>
+          <ul className="flex flex-col gap-0.5">
+            <li><a href={site.telephoneHref} className="inline-flex min-h-11 items-center text-xl font-bold text-white underline-offset-4 hover:underline">{site.telephone}</a></li>
+            <li><a href={`mailto:${site.email}`} className="inline-flex min-h-11 items-center underline-offset-4 hover:underline">{site.email}</a></li>
             <li className="pt-2 text-sable-200">
               {site.horairesTable.map((h) => (
                 <span key={h.jours} className="block">{h.jours} : {h.heures}</span>
               ))}
             </li>
-            <li className="pt-2"><a href={site.doctolib} className="font-semibold text-white underline-offset-4 hover:underline">Prendre rendez-vous sur Doctolib</a></li>
+            <li className="pt-2"><a href={site.doctolib} className="inline-flex min-h-11 items-center font-semibold text-white underline-offset-4 hover:underline">Prendre rendez-vous sur Doctolib</a></li>
           </ul>
         </div>
       </div>

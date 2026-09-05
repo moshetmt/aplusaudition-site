@@ -11,7 +11,7 @@
   --color-sable-200: #e8d9b6;
   --color-sable-400: #d8b676;
   --color-sable-500: #c49e58;
-  --color-sable-700: #8a6a2e;
+  --color-sable-700: #7a5c24;
   --color-sable-900: #3b2f1c;
   --color-sable-950: #241c10;
 }
@@ -64,7 +64,7 @@
   --destructive: #b3261e;
   --border: #e8d9b6;
   --input: #e8d9b6;
-  --ring: #8a6a2e;
+  --ring: #7a5c24;
   --radius: 0.625rem;
 }
 

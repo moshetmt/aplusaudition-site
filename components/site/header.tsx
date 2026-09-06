@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, Phone } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import {
@@ -25,10 +26,11 @@ const btnContour = cn(
 );
 
 export function Header() {
+  const chemin = usePathname();
   return (
     <header className="sticky top-0 z-40 border-b border-sable-200 bg-white">
       <div className="mx-auto flex h-[68px] w-[min(1200px,100%-48px)] items-center gap-3 md:h-[84px] md:gap-8">
-        <Link href="/#haut" aria-label="A+ Audition, retour à l'accueil" className="flex shrink-0 items-center gap-3.5">
+        <Link href="/" aria-label="A+ Audition, retour à l'accueil" className="flex shrink-0 items-center gap-3.5">
           <Image src="/images/logo.png" alt="" width={58} height={58} className="size-[46px] md:size-[58px]" priority />
           <span className="flex flex-col">
             <span className="text-[21px] font-bold leading-none md:text-2xl">{site.nom}</span>
@@ -38,11 +40,11 @@ export function Header() {
 
         <nav aria-label="Menu principal" className="ml-auto hidden md:block">
           <ul className="flex gap-6 lg:gap-8">
-            {site.nav.map((item, i) => (
+            {site.nav.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  aria-current={i === 0 ? "page" : undefined}
+                  aria-current={chemin === item.href ? "page" : undefined}
                   className="relative inline-block py-2.5 font-semibold after:absolute after:inset-x-0 after:bottom-0.5 after:h-[3px] after:origin-left after:scale-x-0 after:bg-sable-400 after:transition-transform after:duration-200 hover:after:scale-x-100 aria-[current]:after:scale-x-100"
                 >
                   {item.label}

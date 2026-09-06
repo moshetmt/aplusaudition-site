@@ -18,9 +18,9 @@ export const site = {
   noteGoogle: "5,0",
   nbAvis: 18,
   nav: [
-    { href: "/#haut", label: "Accueil" },
-    { href: "/#offres", label: "Nos offres" },
-    { href: "/#centre", label: "Le centre" },
-    { href: "/#contact", label: "Contact" },
+    { href: "/", label: "Accueil" },
+    { href: "/nos-offres/", label: "Nos offres" },
+    { href: "/le-centre/", label: "Le centre" },
+    { href: "/contact/", label: "Contact" },
   ],
 };

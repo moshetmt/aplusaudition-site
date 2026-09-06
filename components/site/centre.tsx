@@ -26,7 +26,7 @@ export function Centre() {
             Le centre est membre du réseau Total Audition.
           </p>
           <a
-            href="#contact"
+            href="/contact/"
             className={cn(
               buttonVariants({ variant: "outline" }),
               "h-12 rounded-full border-2 border-sable-900 bg-white px-5 text-[17px] font-bold hover:bg-sable-50"

@@ -42,3 +42,5 @@ next-env.d.ts
 
 # captures locales
 /_captures
+
+.vercel

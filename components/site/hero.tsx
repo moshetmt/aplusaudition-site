@@ -26,7 +26,7 @@ export function Hero() {
             L'audioprothésiste du quartier, à deux pas de la Croisette.
           </h1>
           <p className="mb-7 max-w-[540px] text-lg leading-normal text-sable-100 md:text-xl">
-            Bilan auditif gratuit, essai de 30 jours, appareils 100 % santé sans reste à charge. Gabriel vous reçoit au centre, boulevard Alexandre III.
+            Bilan auditif gratuit, essai de 30 jours, appareils 100 % santé. Gabriel vous reçoit boulevard Alexandre III.
           </p>
 
           <div className="mb-6 flex flex-wrap gap-3">

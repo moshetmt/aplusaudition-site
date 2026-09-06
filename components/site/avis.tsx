@@ -18,7 +18,7 @@ export function Avis() {
           <span className="text-2xl font-semibold text-muted-foreground md:text-3xl"> / 5</span>
         </p>
         <p className="mb-8 text-muted-foreground md:text-xl">
-          Note moyenne sur Google, d'après {site.nbAvis} avis de patients du centre.
+          {site.nbAvis} avis de patients sur Google.
         </p>
         <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
           <a

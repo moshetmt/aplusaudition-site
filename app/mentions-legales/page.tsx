@@ -17,7 +17,7 @@ export default function MentionsLegales() {
         Téléphone : <a href={site.telephoneHref}>{site.telephone}</a> · E-mail : <a href={`mailto:${site.email}`}>{site.email}</a>
       </p>
       <p>Directeur de la publication : Gabriel Nabeth, audioprothésiste diplômé d'État.</p>
-      <p>Numéro SIRET : [à compléter] · Numéro RPPS : [à compléter]</p>
+      <p>SIRET : 938 837 861 00013 · Numéro RPPS de l'audioprothésiste : 10009911073</p>
 
       <h2>Hébergement</h2>
       <p>Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis. <a href="https://vercel.com" rel="noopener">vercel.com</a></p>

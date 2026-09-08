@@ -21,6 +21,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
   --font-heading: var(--font-sans);
+  --font-display: var(--font-display);
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
@@ -80,24 +81,7 @@
   }
 }
 
-/* Voile sur la photo de la banniere : lateral sur desktop, vertical sur mobile */
+/* Voile de la banniere : leger et uniforme, la photo reste lisible (reference : ancien site) */
 .hero-voile {
-  background: linear-gradient(
-    180deg,
-    rgba(36, 28, 16, 0.66) 0%,
-    rgba(36, 28, 16, 0.84) 45%,
-    rgba(36, 28, 16, 0.9) 100%
-  );
-}
-@media (min-width: 960px) {
-  .hero-voile {
-    background: linear-gradient(
-      90deg,
-      rgba(36, 28, 16, 0.95) 0%,
-      rgba(36, 28, 16, 0.88) 34%,
-      rgba(36, 28, 16, 0.52) 52%,
-      rgba(36, 28, 16, 0.06) 72%,
-      rgba(36, 28, 16, 0) 100%
-    );
-  }
+  background: linear-gradient(180deg, rgba(36, 28, 16, 0.38) 0%, rgba(36, 28, 16, 0.5) 55%, rgba(36, 28, 16, 0.62) 100%);
 }

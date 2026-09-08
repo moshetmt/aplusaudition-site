@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Days_One, Source_Sans_3 } from "next/font/google";
+import { Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import { site } from "@/lib/site";
 
@@ -7,13 +7,6 @@ const sourceSans = Source_Sans_3({
   variable: "--font-sans",
   subsets: ["latin"],
   weight: ["400", "600", "700"],
-  display: "swap",
-});
-
-const daysOne = Days_One({
-  variable: "--font-display",
-  subsets: ["latin"],
-  weight: "400",
   display: "swap",
 });
 
@@ -62,7 +55,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="fr" className={`${sourceSans.variable} ${daysOne.variable} h-full antialiased`}>
+    <html lang="fr" className={`${sourceSans.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <a
           href="#contenu"

@@ -20,7 +20,7 @@ export function Hero() {
 
       <div className="relative mx-auto w-[min(880px,100%-40px)] py-16 text-center md:py-24">
         <p className="mb-5 text-[19px] font-semibold md:text-[21px]">100 % santé, 0 € de reste à charge</p>
-        <h1 className="mb-6 text-balance font-display text-[clamp(38px,10.5vw,44px)] font-normal leading-[1.1] md:text-[clamp(44px,4.6vw,60px)]">
+        <h1 className="mb-6 text-balance text-[clamp(36px,10vw,42px)] font-bold tracking-[-0.01em] leading-[1.1] md:text-[clamp(44px,4.6vw,60px)]">
           À Cannes, retrouvez une audition <span className="text-sable-400">claire</span>
         </h1>
         <p className="mx-auto mb-9 max-w-[640px] text-[21px] leading-snug md:text-[24px]">

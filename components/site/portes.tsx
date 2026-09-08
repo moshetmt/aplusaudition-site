@@ -39,7 +39,7 @@ export function Portes() {
                 width={765}
                 height={1020}
                 sizes="(min-width: 960px) 380px, 100vw"
-                className="mb-4 aspect-[4/3] w-full rounded-lg object-cover object-top md:aspect-[4/3]"
+                className="mb-4 aspect-[4/5] w-full rounded-lg object-cover object-center"
               />
               <h2 className="mb-1.5 flex items-center gap-2 text-2xl font-bold">
                 {p.titre}

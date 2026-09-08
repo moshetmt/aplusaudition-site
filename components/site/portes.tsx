@@ -32,20 +32,22 @@ export function Portes() {
       <ul className="mx-auto grid w-[min(1200px,100%-48px)] gap-8 md:grid-cols-3 md:gap-6">
         {portes.map((p) => (
           <li key={p.href}>
-            <Link href={p.href} className="group block">
+            <Link href={p.href} className="group grid grid-cols-[2fr_3fr] items-center gap-4 md:block">
               <Image
                 src={p.photo}
                 alt={p.alt}
                 width={765}
                 height={1020}
                 sizes="(min-width: 960px) 380px, 100vw"
-                className="mb-4 aspect-[4/5] w-full rounded-lg object-cover object-center"
+                className="aspect-[4/5] w-full rounded-lg object-cover object-center md:mb-4"
               />
+              <div>
               <h2 className="mb-1.5 flex items-center gap-2 text-2xl font-bold">
                 {p.titre}
                 <ArrowRight className="size-6 text-sable-700 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
               </h2>
               <p className="text-muted-foreground">{p.texte}</p>
+              </div>
             </Link>
           </li>
         ))}

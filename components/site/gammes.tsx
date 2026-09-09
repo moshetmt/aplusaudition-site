@@ -1,12 +1,11 @@
-import { CalendarDays, Check } from "lucide-react";
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { Check } from "lucide-react";
 import { site } from "@/lib/site";
+import { cont, sect, h2, lead, lien, Kicker, BtnDoctolib } from "@/components/site/ui";
 
 const gammes = [
   {
     nom: "Silver",
-    classe: "Classe I · 100 % santé",
+    classe: "Classe I · 100 % santé",
     resume: "Pris en charge à 100 %, sans reste à charge.",
     points: ["Pris en charge à 100 %", "Performance fiable", "Simplicité d'utilisation", "Compréhension dans le calme"],
     mise: true,
@@ -27,53 +26,42 @@ const gammes = [
 
 export function Gammes() {
   return (
-    <section className="bg-white py-14 md:py-24">
-      <div className="mx-auto w-[min(1200px,100%-48px)]">
-        <p className="mb-3 text-[15px] font-bold uppercase tracking-[0.08em] text-sable-700">Trois gammes</p>
-        <h2 className="mb-4 max-w-[700px] text-balance text-[clamp(28px,6.5vw,34px)] font-bold leading-[1.15] md:text-[40px]">
-          Du 100 % santé au haut de gamme, choisi avec vous après le bilan
-        </h2>
-        <p className="mb-10 max-w-[640px] text-muted-foreground md:text-xl">
+    <section className={`bg-white ${sect}`}>
+      <div className={cont}>
+        <Kicker>Trois gammes</Kicker>
+        <h2 className={`${h2} max-w-[760px]`}>Du 100 % santé au haut de gamme, choisi avec vous après le bilan</h2>
+        <p className={`${lead} mt-6 max-w-[640px]`}>
           Le bilan gratuit vient d'abord. Ensuite seulement, Gabriel vous propose la gamme adaptée à votre audition et à votre quotidien, à essayer 30 jours.
         </p>
 
-        <ul className="grid gap-5 md:grid-cols-3 md:gap-6">
-          {gammes.map((g) => (
+        <ul className="mt-12 grid md:mt-16 md:grid-cols-3">
+          {gammes.map((g, i) => (
             <li
               key={g.nom}
-              className={cn(
-                "flex flex-col rounded-lg border p-6 md:p-8",
-                g.mise ? "border-sable-400 bg-sable-50" : "border-sable-200 bg-white"
-              )}
+              className={`flex flex-col border-t border-sable-200 py-8 md:border-t-0 md:py-2 ${i > 0 ? "md:border-l md:border-sable-200 md:pl-10" : ""} ${i < 2 ? "md:pr-10" : ""}`}
             >
-              <p className="mb-1 text-[15px] font-bold uppercase tracking-[0.08em] text-sable-700">{g.classe}</p>
-              <h3 className="mb-2 text-3xl font-bold">{g.nom}</h3>
-              <p className="mb-5 text-muted-foreground">{g.resume}</p>
-              <ul className="mb-7 flex flex-col gap-2.5">
+              <p className="text-[13px] font-semibold uppercase tracking-[0.2em] text-sable-700">{g.classe}</p>
+              <h3 className="mt-3 text-[32px] font-semibold leading-none tracking-[-0.02em] text-sable-950 md:text-[36px]">{g.nom}</h3>
+              <p className="mt-3 text-[17px] text-sable-800 md:text-[18px]">{g.resume}</p>
+              <ul className="mt-6 flex flex-col gap-3">
                 {g.points.map((p) => (
-                  <li key={p} className="flex items-start gap-2.5">
-                    <span className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-sable-400 text-sable-900" aria-hidden="true">
-                      <Check className="size-3.5" strokeWidth={3} />
-                    </span>
+                  <li key={p} className="flex items-start gap-3 text-[17px] leading-snug text-sable-800">
+                    <Check className="mt-0.5 size-[18px] shrink-0 text-sable-700" strokeWidth={2} aria-hidden="true" />
                     {p}
                   </li>
                 ))}
               </ul>
-              <a
-                href={site.doctolib}
-                className={cn(
-                  buttonVariants({ variant: g.mise ? "default" : "outline" }),
-                  "mt-auto h-12 rounded-full px-5 text-[17px] font-bold",
-                  g.mise ? "hover:bg-sable-500" : "border-2 border-sable-900 bg-white hover:bg-sable-50"
+              <div className="mt-8 md:mt-auto md:pt-8">
+                {g.mise ? (
+                  <BtnDoctolib className="w-full max-w-[360px] md:w-auto" />
+                ) : (
+                  <a href={site.doctolib} className={lien}>Demander un devis gratuit</a>
                 )}
-              >
-                <CalendarDays className="size-5" aria-hidden="true" />
-                Prendre rendez-vous
-              </a>
+              </div>
             </li>
           ))}
         </ul>
-        <p className="mt-6 text-[15px] text-muted-foreground">
+        <p className="mt-10 max-w-[760px] text-[15px] leading-relaxed text-sable-700">
           Aides auditives : dispositifs médicaux délivrés sur prescription médicale. Garantie 4 ans sur les appareils. Aucun prix affiché en ligne : un devis détaillé et gratuit vous est remis au centre.
         </p>
       </div>

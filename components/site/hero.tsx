@@ -33,7 +33,7 @@ export function Hero() {
           Retrouvez une audition <span className="text-sable-400 md:text-sable-700">claire</span>
         </h1>
         <p className="mx-auto mt-5 max-w-[520px] text-[18px] leading-snug text-white/90 md:mx-0 md:mt-6 md:text-[21px] md:text-sable-800">
-          Bilan gratuit, essai 30 jours, appareils 100 % santé sans reste à charge.
+          Bilan gratuit, essai 30 jours, appareils 100 % santé sans reste à charge.
         </p>
 
         <div className="mt-8 flex flex-col items-center gap-5 md:mt-10 md:flex-row md:flex-wrap md:items-center md:gap-x-8 md:gap-y-5">

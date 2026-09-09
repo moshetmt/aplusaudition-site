@@ -1,48 +1,32 @@
-import { ExternalLink, Star } from "lucide-react";
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { Star } from "lucide-react";
 import { site } from "@/lib/site";
+import { cont, sect, btnOr, lien, Kicker } from "@/components/site/ui";
+import { GoogleG } from "@/components/site/marques";
 
 export function Avis() {
   return (
-    <section id="avis" className="border-y border-sable-200 bg-sable-100 py-14 md:py-20">
-      <div className="mx-auto flex w-[min(1200px,100%-48px)] flex-col items-center text-center">
-        <p className="mb-3 text-[15px] font-bold uppercase tracking-[0.08em] text-sable-700">Ce que disent les patients</p>
-        <div className="mb-2 flex gap-1" aria-hidden="true">
+    <section id="avis" className={`border-t border-sable-200 bg-white ${sect}`}>
+      <div className={`${cont} flex flex-col items-center text-center`}>
+        <Kicker centre>Ce que disent les patients</Kicker>
+        <div className="mb-4 flex gap-1.5" aria-hidden="true">
           {Array.from({ length: 5 }).map((_, i) => (
-            <Star key={i} className="size-8 fill-sable-400 text-sable-700 md:size-9" />
+            <Star key={i} className="size-7 fill-sable-400 text-sable-400 md:size-8" strokeWidth={1} />
           ))}
         </div>
-        <p className="mb-1 text-[44px] font-bold leading-none md:text-[56px]">
+        <p className="text-[72px] font-semibold leading-none tracking-[-0.03em] text-sable-950 md:text-[104px]">
           {site.noteGoogle}
-          <span className="text-2xl font-semibold text-muted-foreground md:text-3xl"> / 5</span>
+          <span className="text-[26px] font-normal tracking-normal text-sable-700 md:text-[32px]"> / 5</span>
         </p>
-        <p className="mb-8 text-muted-foreground md:text-xl">
-          {site.nbAvis} avis de patients sur Google.
+        <p className="mt-5 flex items-center justify-center gap-2.5 text-[18px] text-sable-800 md:text-[20px]">
+          <GoogleG className="size-6" />
+          {site.nbAvis} avis de patients sur Google
         </p>
-        <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
-          <a
-            href={site.avisGoogle}
-            target="_blank"
-            rel="noopener"
-            className={cn(
-              buttonVariants({ variant: "outline" }),
-              "h-[54px] rounded-full border-2 border-sable-900 bg-white px-6 text-lg font-bold hover:bg-sable-50"
-            )}
-          >
-            Lire les avis sur Google
-            <ExternalLink className="size-5" aria-hidden="true" />
-          </a>
-          <a
-            href={site.laisserAvis}
-            target="_blank"
-            rel="noopener"
-            className={cn(
-              buttonVariants({ variant: "default" }),
-              "h-[54px] rounded-full px-6 text-lg font-bold hover:bg-sable-500"
-            )}
-          >
+        <div className="mt-10 flex w-full flex-col items-center gap-5 md:flex-row md:justify-center md:gap-10">
+          <a href={site.laisserAvis} target="_blank" rel="noopener" className={`${btnOr} w-full max-w-[360px] md:w-auto`}>
             Laisser un avis
+          </a>
+          <a href={site.avisGoogle} target="_blank" rel="noopener" className={lien}>
+            Lire les avis sur Google
           </a>
         </div>
       </div>

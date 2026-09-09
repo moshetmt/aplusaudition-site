@@ -20,10 +20,12 @@ export default function Contact() {
           sur="Contact"
           titre="Appelez, écrivez ou réservez en ligne"
           intro="Le plus simple : un appel au 04 22 32 82 31 aux heures d'ouverture, ou un rendez-vous sur Doctolib à toute heure. Aucun formulaire à remplir."
+          photo="/images/devanture.webp"
+          alt="La devanture du centre A+ Audition, 24 boulevard Alexandre III à Cannes"
         />
         <Acces />
       </main>
-      <Footer />
+      <Footer contact={false} />
     </>
   );
 }

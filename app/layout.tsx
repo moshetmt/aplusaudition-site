@@ -11,7 +11,7 @@ const sourceSans = Source_Sans_3({
 });
 
 const description =
-  "A+ Audition, audioprothésiste indépendant à Cannes, quartier Alexandre III : bilan auditif gratuit, essai 30 jours, appareils 100 % santé sans reste à charge.";
+  "A+ Audition, audioprothésiste indépendant à Cannes, quartier Alexandre III : bilan auditif gratuit, essai 30 jours, appareils 100 % santé sans reste à charge.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://aplusaudition.fr"),

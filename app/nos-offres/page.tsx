@@ -7,9 +7,9 @@ import { Sante } from "@/components/site/sante";
 import { Faq } from "@/components/site/faq";
 
 export const metadata: Metadata = {
-  title: "Nos offres : bilan gratuit, 100 % santé, essai 30 jours · A+ Audition Cannes",
+  title: "Nos offres : bilan gratuit, 100 % santé, essai 30 jours · A+ Audition Cannes",
   description:
-    "Bilan auditif gratuit, appareils 100 % santé sans reste à charge, gammes haut de gamme sur devis, essai 30 jours et suivi. A+ Audition, audioprothésiste à Cannes.",
+    "Bilan auditif gratuit, appareils 100 % santé sans reste à charge, gammes haut de gamme sur devis, essai 30 jours et suivi. A+ Audition, audioprothésiste à Cannes.",
   alternates: { canonical: "/nos-offres/" },
 };
 
@@ -20,8 +20,10 @@ export default function NosOffres() {
       <main id="contenu">
         <PageEntete
           sur="Nos offres"
-          titre="Bilan gratuit, essai 30 jours, appareils 100 % santé"
-          intro="Tout commence par un bilan auditif gratuit au centre. Ensuite, Gabriel vous propose la gamme adaptée, du 100 % santé sans reste à charge au haut de gamme sur devis."
+          titre="Bilan gratuit, essai 30 jours, appareils 100 % santé"
+          intro="Tout commence par un bilan auditif gratuit au centre. Ensuite, Gabriel vous propose la gamme adaptée, du 100 % santé sans reste à charge au haut de gamme sur devis."
+          photo="/images/consultation.webp"
+          alt="Une salle de consultation du centre A+ Audition"
         />
         <Gammes />
         <Sante />

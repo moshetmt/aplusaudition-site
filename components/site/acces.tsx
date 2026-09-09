@@ -1,79 +1,58 @@
 import Image from "next/image";
-import { CalendarDays, Clock, Mail, MapPin, Navigation, Phone } from "lucide-react";
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { ArrowUpRight, Phone } from "lucide-react";
 import { site } from "@/lib/site";
+import { cont, sect, h2, lien, photo, Kicker, BtnDoctolib } from "@/components/site/ui";
 
 export function Acces() {
   return (
-    <section id="contact" className="bg-white py-14 md:py-24">
-      <div className="mx-auto grid w-[min(1200px,100%-48px)] gap-10 md:grid-cols-[6fr_6fr] md:items-center md:gap-16">
+    <section id="contact" className={`bg-white ${sect}`}>
+      <div className={`${cont} grid gap-12 md:grid-cols-2 md:items-start md:gap-20`}>
         <div>
-          <p className="mb-3 text-[15px] font-bold uppercase tracking-[0.08em] text-sable-700">Nous trouver</p>
-          <h2 className="mb-6 text-balance text-[clamp(28px,6.5vw,34px)] font-bold leading-[1.15] md:text-[40px]">
-            Boulevard Alexandre III, à deux pas de la Croisette
-          </h2>
+          <Kicker>Nous trouver</Kicker>
+          <h2 className={h2}>Boulevard Alexandre III, à deux pas de la Croisette</h2>
 
-          <dl className="mb-8 flex flex-col gap-5">
-            <div className="flex items-start gap-3.5">
-              <dt className="sr-only">Adresse</dt>
-              <MapPin className="mt-1 size-6 shrink-0 text-sable-700" aria-hidden="true" />
-              <dd className="m-0 font-semibold md:text-xl">{site.adresse}</dd>
+          <dl className="mt-8 divide-y divide-sable-200 border-y border-sable-200">
+            <div className="grid gap-1 py-5 md:grid-cols-[140px_1fr] md:gap-6">
+              <dt className="text-[13px] font-semibold uppercase tracking-[0.2em] text-sable-700 md:pt-1.5">Adresse</dt>
+              <dd className="m-0 text-[18px] font-semibold text-sable-950 md:text-[20px]">{site.adresse}</dd>
             </div>
-            <div className="flex items-start gap-3.5">
-              <dt className="sr-only">Horaires</dt>
-              <Clock className="mt-1 size-6 shrink-0 text-sable-700" aria-hidden="true" />
-              <dd className="m-0 w-full">
-                <table className="w-full max-w-[380px] border-collapse md:text-lg">
+            <div className="grid gap-1 py-5 md:grid-cols-[140px_1fr] md:gap-6">
+              <dt className="text-[13px] font-semibold uppercase tracking-[0.2em] text-sable-700 md:pt-1.5">Horaires</dt>
+              <dd className="m-0">
+                <table className="w-full max-w-[380px] border-collapse text-[17px] md:text-[18px]">
                   <tbody>
                     {site.horairesTable.map((h) => (
-                      <tr key={h.jours} className="border-b border-sable-200 last:border-0">
-                        <th scope="row" className="py-1.5 pr-4 text-left font-semibold">{h.jours}</th>
-                        <td className="py-1.5 text-right text-muted-foreground">{h.heures}</td>
+                      <tr key={h.jours}>
+                        <th scope="row" className="py-1 pr-4 text-left font-semibold text-sable-950">{h.jours}</th>
+                        <td className="py-1 text-right text-sable-800">{h.heures}</td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
               </dd>
             </div>
-            <div className="flex items-start gap-3.5">
-              <dt className="sr-only">Téléphone</dt>
-              <Phone className="mt-1 size-6 shrink-0 text-sable-700" aria-hidden="true" />
-              <dd className="m-0 font-semibold md:text-xl">
-                <a href={site.telephoneHref} className="inline-flex min-h-11 items-center underline-offset-4 hover:underline">{site.telephone}</a>
+            <div className="grid gap-1 py-5 md:grid-cols-[140px_1fr] md:gap-6">
+              <dt className="text-[13px] font-semibold uppercase tracking-[0.2em] text-sable-700 md:pt-1.5">Téléphone</dt>
+              <dd className="m-0">
+                <a href={site.telephoneHref} className={lien}>
+                  <Phone className="size-5" strokeWidth={1.75} aria-hidden="true" />
+                  {site.telephone}
+                </a>
               </dd>
             </div>
-            <div className="flex items-start gap-3.5">
-              <dt className="sr-only">E-mail</dt>
-              <Mail className="mt-1 size-6 shrink-0 text-sable-700" aria-hidden="true" />
-              <dd className="m-0 md:text-xl">
-                <a href={`mailto:${site.email}`} className="inline-flex min-h-11 items-center underline-offset-4 hover:underline">{site.email}</a>
+            <div className="grid gap-1 py-5 md:grid-cols-[140px_1fr] md:gap-6">
+              <dt className="text-[13px] font-semibold uppercase tracking-[0.2em] text-sable-700 md:pt-1.5">E-mail</dt>
+              <dd className="m-0">
+                <a href={`mailto:${site.email}`} className="inline-flex min-h-12 items-center text-[18px] text-sable-800 underline decoration-sable-200 underline-offset-[6px] hover:decoration-sable-400">{site.email}</a>
               </dd>
             </div>
           </dl>
 
-          <div className="flex flex-wrap gap-3">
-            <a
-              href={site.itineraire}
-              target="_blank"
-              rel="noopener"
-              className={cn(
-                buttonVariants({ variant: "default" }),
-                "h-[54px] w-full rounded-full px-6 text-lg font-bold hover:bg-sable-500 md:w-auto"
-              )}
-            >
-              <Navigation className="size-5" aria-hidden="true" />
+          <div className="mt-10 flex flex-col items-start gap-5 md:flex-row md:items-center md:gap-10">
+            <BtnDoctolib className="w-full max-w-[360px] md:w-auto" />
+            <a href={site.itineraire} target="_blank" rel="noopener" className={lien}>
               Itinéraire
-            </a>
-            <a
-              href={site.doctolib}
-              className={cn(
-                buttonVariants({ variant: "outline" }),
-                "h-[54px] w-full rounded-full border-2 border-sable-900 bg-white px-6 text-lg font-bold hover:bg-sable-50 md:w-auto"
-              )}
-            >
-              <CalendarDays className="size-5" aria-hidden="true" />
-              Prendre rendez-vous
+              <ArrowUpRight className="size-5 text-sable-400" strokeWidth={1.75} aria-hidden="true" />
             </a>
           </div>
         </div>
@@ -84,7 +63,7 @@ export function Acces() {
           width={1360}
           height={842}
           sizes="(min-width: 960px) 560px, 100vw"
-          className="aspect-[4/3] w-full rounded-lg object-cover object-[50%_20%]"
+          className={`${photo} aspect-[4/3] object-[50%_20%] md:aspect-[4/5]`}
         />
       </div>
     </section>

@@ -32,7 +32,7 @@ export default function MentionsLegales() {
 
       <h2>Information réglementaire</h2>
       <p>
-        Les aides auditives sont des dispositifs médicaux. Leur délivrance s'effectue sur prescription médicale. Les informations présentées sur ce site relatives à l'offre 100 % santé ont un caractère informatif et ne constituent pas une offre commerciale.
+        Les aides auditives sont des dispositifs médicaux. Leur délivrance s'effectue sur prescription médicale. Les informations présentées sur ce site relatives à l'offre 100 % santé ont un caractère informatif et ne constituent pas une offre commerciale.
       </p>
 
       <h2>Prise de rendez-vous</h2>

@@ -14,14 +14,14 @@ export function Hero() {
     >
       <div className="absolute inset-0 md:relative md:order-2">
         <Image
-          src="/images/couple-50-60.webp"
+          src="/images/plage-couple.webp"
           alt=""
           fill
           priority
           sizes="(min-width: 768px) 50vw, 100vw"
-          className="object-cover object-[50%_18%] md:object-[50%_20%]"
+          className="scale-[1.2] object-cover object-[35%_50%] origin-[12%_100%] md:scale-100 md:object-[50%_45%] md:origin-center 2xl:object-[50%_30%]"
         />
-        <div className="hero-voile absolute inset-0 md:hidden" aria-hidden="true" />
+        <div className="hero-voile-fort absolute inset-0 md:hidden" aria-hidden="true" />
       </div>
 
       <div className="relative mx-auto w-[min(760px,100%-48px)] pb-12 text-center md:order-1 md:flex md:h-full md:w-full md:flex-col md:justify-center md:px-[clamp(40px,7vw,112px)] md:pb-0 md:text-left">

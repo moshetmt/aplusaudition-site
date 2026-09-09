@@ -33,8 +33,12 @@ export function Hero() {
           <span className="block text-[clamp(38px,10vw,48px)] font-semibold md:text-[clamp(48px,4.6vw,64px)]">
             A<span className="text-sable-400 md:text-sable-700">+</span> Audition
           </span>
-          <span className="mt-3 block text-[clamp(20px,5vw,24px)] font-normal tracking-[-0.01em] text-white/90 md:mt-4 md:text-[clamp(24px,2.1vw,30px)] md:text-sable-800">
-            le petit plus qui s'entend
+          <span className="mt-3.5 flex items-center justify-center gap-3 md:mt-4 md:justify-start">
+            <span className="h-px w-7 flex-none bg-sable-400/80 md:hidden" aria-hidden="true" />
+            <span className="text-[clamp(16px,4.2vw,18px)] font-semibold uppercase leading-[1.35] tracking-[0.17em] text-white md:text-[clamp(18px,1.55vw,21px)] md:text-sable-950">
+              le petit <span className="text-sable-400 md:text-sable-700">+</span> qui s&rsquo;entend
+            </span>
+            <span className="h-px w-7 flex-none bg-sable-400/80 md:hidden" aria-hidden="true" />
           </span>
         </h1>
         <p className="mx-auto mt-5 max-w-[520px] text-[18px] leading-snug text-white/90 md:mx-0 md:mt-6 md:text-[21px] md:text-sable-800">

@@ -25,6 +25,7 @@ export default function LeCentre() {
           intro="Au 24 boulevard Alexandre III. Un lieu calme, une cabine de test, des bureaux de consultation, et une seule personne qui vous suit du bilan au dernier réglage."
           photo="/images/comptoir.webp"
           alt="Le comptoir d'accueil du centre A+ Audition"
+          voile="hero-voile-fort"
         />
         <Centre />
         <Parcours />

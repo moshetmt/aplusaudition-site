@@ -24,6 +24,7 @@ export default function NosOffres() {
           intro="Tout commence par un bilan auditif gratuit au centre. Ensuite, Gabriel vous propose la gamme adaptée, du 100 % santé sans reste à charge au haut de gamme sur devis."
           photo="/images/consultation.webp"
           alt="Une salle de consultation du centre A+ Audition"
+          voile="hero-voile-fort"
         />
         <Gammes />
         <Sante />

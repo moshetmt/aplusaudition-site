@@ -22,6 +22,8 @@ export default function Contact() {
           intro="Le plus simple : un appel au 04 22 32 82 31 aux heures d'ouverture, ou un rendez-vous sur Doctolib à toute heure. Aucun formulaire à remplir."
           photo="/images/devanture.webp"
           alt="La devanture du centre A+ Audition, 24 boulevard Alexandre III à Cannes"
+          voile="hero-voile-fort"
+          position="object-[92%_50%] md:object-[62%_50%]"
         />
         <Acces />
       </main>

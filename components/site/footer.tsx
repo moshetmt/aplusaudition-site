@@ -56,7 +56,14 @@ export function Footer({ contact = true }: { contact?: boolean }) {
             <li><Link href="/mentions-legales/" className="inline-flex min-h-11 items-center hover:text-white">Mentions légales</Link></li>
             <li><Link href="/confidentialite/" className="inline-flex min-h-11 items-center hover:text-white">Confidentialité</Link></li>
           </ul>
-          <p className="text-[15px] text-sable-300">© {new Date().getFullYear()} {site.nom}</p>
+          <div className="text-[15px] text-sable-300">
+            <p>© {new Date().getFullYear()} {site.nom}</p>
+            <p className="mt-1">
+              Site conçu par{" "}
+              <a href="https://123digital.fr" target="_blank" rel="noopener"
+                 className="underline underline-offset-2 hover:text-white">123digital.fr</a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

@@ -20,14 +20,10 @@ name: Publier aplusaudition.fr
 # le prochain subtree push serait rejete.
 
 on:
+  # Aucun champ a remplir : l'app GitHub grise le bouton tant qu'un input
+  # obligatoire n'a pas ete ouvert et choisi a la main. Republier le meme
+  # code ne peut rien casser, la confirmation ne protegeait de rien.
   workflow_dispatch:
-    inputs:
-      confirmation:
-        description: "Republier aplusaudition.fr en production ?"
-        type: choice
-        options:
-          - "oui, en production"
-        required: true
 
 concurrency:
   group: publier-aplusaudition.fr

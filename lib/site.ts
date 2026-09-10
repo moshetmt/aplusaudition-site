@@ -3,7 +3,7 @@ export const site = {
   telephone: "04 22 32 82 31",
   telephoneHref: "tel:0422328231",
   email: "contact@aplusaudition.fr",
-  doctolib: "https://www.doctolib.fr/centre-auditif/cannes/audition-cannes",
+  doctolib: "https://www.doctolib.fr/centre-auditif/cannes/a-audition-audioprothesiste-a-cannes",
   adresse: "24 boulevard Alexandre III, 06400 Cannes",
   horaires: "Lundi à jeudi 9h30–18h30 · Vendredi 9h–14h",
   horairesTable: [

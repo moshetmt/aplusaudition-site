@@ -5,6 +5,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Politique de confidentialité · A+ Audition",
   description: "Politique de confidentialité du site aplusaudition.fr.",
+  alternates: { canonical: "/confidentialite/" },
   robots: { index: false },
 };
 

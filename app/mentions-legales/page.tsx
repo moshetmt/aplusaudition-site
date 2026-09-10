@@ -5,6 +5,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Mentions légales · A+ Audition",
   description: "Mentions légales du site aplusaudition.fr.",
+  alternates: { canonical: "/mentions-legales/" },
   robots: { index: false },
 };
 

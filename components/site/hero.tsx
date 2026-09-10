@@ -25,11 +25,14 @@ export function Hero() {
       </div>
 
       <div className="relative mx-auto w-[min(760px,100%-48px)] pb-12 text-center md:order-1 md:flex md:h-full md:w-full md:flex-col md:justify-center md:px-[clamp(40px,7vw,112px)] md:pb-0 md:text-left">
-        <p className="text-[14px] font-semibold uppercase tracking-[0.2em] text-sable-300 md:text-[15px] md:text-sable-700">
-          Audioprothésiste à Cannes
-        </p>
-        <span className="mx-auto my-5 block h-px w-8 bg-sable-400 md:mx-0 md:my-6" aria-hidden="true" />
+        {/* Le sur-titre porte les deux mots-cles du referencement local et vit DANS le h1
+           (audit on-page du 10/09 : le h1 ne disait ni Cannes ni audioprothesiste).
+           Rendu strictement identique a la version validee, verifie au pixel. */}
         <h1 className="text-balance leading-[1.05] tracking-[-0.02em]">
+          <span className="block text-[14px] font-semibold uppercase leading-normal tracking-[0.2em] text-sable-300 md:text-[15px] md:text-sable-700">
+            Audioprothésiste à Cannes
+          </span>
+          <span className="mx-auto my-5 block h-px w-8 bg-sable-400 md:mx-0 md:my-6" aria-hidden="true" />
           <span className="block text-[clamp(38px,10vw,48px)] font-semibold md:text-[clamp(48px,4.6vw,64px)]">
             A<span className="text-sable-400 md:text-sable-700">+</span> Audition
           </span>

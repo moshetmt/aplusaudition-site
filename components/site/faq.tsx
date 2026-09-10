@@ -20,9 +20,26 @@ const questions = [
   },
 ];
 
+/* Balisage FAQ (10/09) : les 4 questions existaient deja en accordeon, rien n'est
+   ajoute au texte visible. Une seule source, le tableau ci-dessus, sert l'affichage
+   et le schema, donc les deux ne peuvent pas diverger. */
+const jsonLdFaq = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: questions.map((x) => ({
+    "@type": "Question",
+    name: x.q,
+    acceptedAnswer: { "@type": "Answer", text: x.r },
+  })),
+};
+
 export function Faq() {
   return (
     <section className={`bg-white ${sect}`}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
+      />
       <div className="mx-auto w-[min(860px,100%-40px)] md:w-[min(860px,100%-64px)]">
         <Kicker>Questions fréquentes</Kicker>
         <h2 className={h2}>Des questions sur votre audition ?</h2>

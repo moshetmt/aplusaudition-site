@@ -52,6 +52,7 @@ export function Footer({ contact = true }: { contact?: boolean }) {
             {site.nav.map((n) => (
               <li key={n.href}><Link href={n.href} className="inline-flex min-h-11 items-center hover:text-white">{n.label}</Link></li>
             ))}
+            <li><Link href="/bilan-auditif-cannes/" className="inline-flex min-h-11 items-center hover:text-white">Bilan auditif gratuit</Link></li>
             <li><Link href="/mentions-legales/" className="inline-flex min-h-11 items-center hover:text-white">Mentions légales</Link></li>
             <li><Link href="/confidentialite/" className="inline-flex min-h-11 items-center hover:text-white">Confidentialité</Link></li>
           </ul>

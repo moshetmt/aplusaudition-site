@@ -94,3 +94,10 @@
 .hero-voile-fort {
   background: rgba(30, 24, 17, 0.64);
 }
+
+/* Bannieres des pages interieures (10/09) : leurs photos de cabinet sont plus claires
+   dans la zone du texte que la photo de plage de l'accueil. Mesure sous les glyphes :
+   l'intro en 17 px tombait entre 5,3 et 6,1 contre blanc, sous le AAA exige. */
+.hero-voile-page {
+  background: rgba(30, 24, 17, 0.76);
+}

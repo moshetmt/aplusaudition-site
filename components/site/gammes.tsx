@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Check } from "lucide-react";
 import { site } from "@/lib/site";
 import { cont, sect, h2, lead, lien, Kicker, BtnDoctolib } from "@/components/site/ui";
@@ -31,7 +32,7 @@ export function Gammes() {
         <Kicker>Trois gammes</Kicker>
         <h2 className={`${h2} max-w-[760px]`}>Du 100 % santé au haut de gamme, choisi avec vous après le bilan</h2>
         <p className={`${lead} mt-6 max-w-[640px]`}>
-          Le bilan gratuit vient d'abord. Ensuite seulement, Gabriel vous propose la gamme adaptée à votre audition et à votre quotidien, à essayer 30 jours.
+          Le <Link href="/bilan-auditif-cannes/" className="underline decoration-sable-400 decoration-2 underline-offset-[6px] hover:decoration-sable-700">bilan auditif gratuit</Link> vient d'abord, au centre, à Cannes. Ensuite seulement, Gabriel vous propose la gamme adaptée à votre audition et à votre quotidien, à essayer 30 jours.
         </p>
 
         <ul className="mt-12 grid md:mt-16 md:grid-cols-3">

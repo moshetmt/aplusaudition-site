@@ -11,7 +11,7 @@ const raisons = [
   },
   {
     titre: "Un centre indépendant à Cannes",
-    texte: "Des solutions adaptées à votre audition, vos besoins et votre budget.",
+    texte: "Audioprothésiste diplômé d'État et indépendant, installé boulevard Alexandre III, à deux pas de la Croisette.",
   },
 ];
 

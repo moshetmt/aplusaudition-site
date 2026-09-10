@@ -1,7 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowUpRight, Phone } from "lucide-react";
 import { site } from "@/lib/site";
-import { cont, sect, h2, lien, photo, Kicker, BtnDoctolib } from "@/components/site/ui";
+import { cont, sect, h2, lead, lien, photo, Kicker, BtnDoctolib } from "@/components/site/ui";
 
 export function Acces() {
   return (
@@ -10,6 +11,19 @@ export function Acces() {
         <div>
           <Kicker>Nous trouver</Kicker>
           <h2 className={h2}>Boulevard Alexandre III, à deux pas de la Croisette</h2>
+
+          {/* Acces (10/09) : uniquement ce qui est verifiable sur la photo de la devanture
+             et dans le dossier. Rien sur le stationnement ni les bus, l'operateur n'a pas
+             encore donne l'information et l'inventer enverrait les patients au mauvais endroit. */}
+          <p className={`${lead} mt-6`}>
+            Le centre est de plain-pied, en rez-de-chaussée sur le boulevard : la vitrine donne sur la rue et
+            l&rsquo;entrée se fait directement depuis le trottoir, sans marche ni interphone.
+          </p>
+          <p className={`${lead} mt-4`}>
+            Vous êtes dans le quartier Croisette et Alexandre III, à quelques minutes à pied du front de mer.
+            Si vous venez pour un <Link href="/bilan-auditif-cannes/" className={lien}>bilan auditif gratuit</Link>,
+            prévoyez de quoi patienter quelques minutes : Gabriel reçoit seul et prend le temps avec chaque personne.
+          </p>
 
           <dl className="mt-8 divide-y divide-sable-200 border-y border-sable-200">
             <div className="grid gap-1 py-5 md:grid-cols-[140px_1fr] md:gap-6">
